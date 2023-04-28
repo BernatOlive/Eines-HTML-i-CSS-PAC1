@@ -1,0 +1,159 @@
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+
+@media screen and (max-width: 640px) { /*Mòbil*/
+    header {
+        background-color: #333; /*fons del menú*/
+        color: #fff; /*color de text del menú*/
+        display: flex; /*per a posar els elements en línia*/
+        align-items: center; /*per a centrar els elements verticalment*/
+        justify-content: space-between; /*per a separar els elements igualment*/
+        padding: 10px 20px; /*espaiament al voltant del menú*/
+        position: fixed; /*per a fer el menú sticky*/
+        top: 0; /*per a fixar el menú a la part superior*/
+        left: 0;
+        width: 100%;
+    }
+    
+    nav {
+        display: flex; /*per a posar els elements en línia*/
+        justify-content: center; /*per a centrar els elements en línia*/
+        flex-grow: 1; /*per a estendre els enllaços*/
+    }
+    
+    nav ul {
+        list-style-type: none; /*per a eliminar la numeració de la llista*/
+        margin: 0; /*per a eliminar el marge dels costats*/
+        padding: 0; /*per a eliminar l'espai interior de la llista*/
+        display: flex; /*per a posar els elements en línia*/
+        justify-content: center; /*per a centrar els elements en línia*/
+        align-items: center; /*per a centrar els elements verticalment*/
+        flex-grow: 1; /*per a estendre els enllaços*/
+    }
+    
+    nav a {
+        color: #fff; /*color dels enllaços*/
+        text-decoration: none; /*per a eliminar el subratllat dels enllaços*/
+        font-size: 16px; /*mida de text dels enllaços*/
+        flex-grow: 1; /*per a estendre els enllaços*/
+        padding: 30px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .contingut, .contingut-main{
+        margin-top: 10%;
+    }
+
+    footer {
+        margin-top: 10%;
+        text-align: center;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+@media screen and (min-width: 641px) { /*Desktop*/
+    nav {
+        position: fixed; /* fixa la barra lateral */
+        top: 0; /* la col·loca a dalt */
+        left: 0; /* la col·loca a l'esquerra */
+        height: 100vh; /* la fa ocupar tota l'alçada de la pantalla */
+        width: 20%; /* la fa ocupar el 20% de l'amplada de la pantalla */
+        background-color: #333; /* fons del menú */
+        color: #fff; /* color de text del menú */
+        padding: 20px; /* espaiament interior */
+        box-sizing: border-box; /* inclou padding i border en el càlcul dels dimensions */
+    }
+        
+    nav ul {
+        list-style-type: none; /* elimina la numeració de la llista */
+        margin: 0;
+        padding: 0;
+    }
+        
+    nav li {
+        margin-bottom: 50px; /* espaiament entre elements */
+    }
+        
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: calc(25vw / 10);
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .contingut-main {
+        margin-left: 20%;
+    }
+
+    .contingut {
+        margin-left: 25%;
+        margin-right: 5%;
+        margin-top: 1.5%;
+    }
+    
+    #portada {
+        height: 100vh; /* l'alçada serà del 100% de la vista */
+        overflow: hidden; /* per a evitar que l'imatge s'escapin dels límits */
+    }
+
+    footer {
+        margin-left: 25%;
+        margin-top: 5%;
+        text-align: center;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+p, li, h1, h2, a {
+    font-family: "Montserrat", sans-serif;
+}
+
+#portada img {
+    height: auto; /* ajusta l'alçada de la imatge a l'amplada disponible */
+    width: 100%; /* la imatge ocuparà tota l'amplada */
+    object-fit: cover; /* per a que la imatge s'adapti als límits de #portada*/
+}
+
+
+
+.timeline {
+    margin-left: 50px; /* mou la llista cap a la dreta per deixar espai per a la línia vertical */
+    padding: 0; /* elimina el padding de la llista */
+    position: relative; /* necessari per poder situar la línia vertical */
+}
+  
+.timeline li {
+    margin-bottom: 20px; /* separació entre elements de la llista */
+    padding-left: 30px; /* mou el text cap a la dreta per deixar espai per a la línia vertical */
+}
+  
+.timeline li:before {
+    content: ""; /* necessari per crear un element buit per a la línia vertical */
+    width: 2px; /* amplada de la línia vertical */
+    height: 100%; /* fa que la línia vertical ocupi tot l'espai vertical disponible */
+    background-color: black; /* color de la línia vertical */
+    position: absolute; /* necessari per situar la línia vertical a la dreta del text */
+    top: 0; /* situem la línia vertical a dalt de tot */
+    left: 0; /* situem la línia vertical a l'esquerra de l'element pare (la llista) */
+}
+
+.imatge-detall {
+    padding: 10px;
+    text-align: center;
+}
+
+.imatge-detall img {
+    max-width: 250px;
+    height: auto;
+}
+.imatge-detall p {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.enllac li {
+    margin-bottom: 20px;
+}
